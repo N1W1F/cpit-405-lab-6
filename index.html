@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 6 | Like, Dislike & Comments</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <span class="eyebrow">CPIT 405 · LAB 06</span>
+    <h1>Share your opinion</h1>
+    <p class="intro">Vote once, leave a comment, and reset whenever you want to start over.</p>
+
+    <section aria-labelledby="vote-heading">
+      <h2 id="vote-heading">Your vote</h2>
+      <div class="vote-grid">
+        <button id="like-button" class="vote-button like" type="button" aria-describedby="like-count"><span aria-hidden="true">👍</span> Like <span id="like-count" class="count">0</span></button>
+        <button id="dislike-button" class="vote-button dislike" type="button" aria-describedby="dislike-count"><span aria-hidden="true">👎</span> Dislike <span id="dislike-count" class="count">0</span></button>
+      </div>
+    </section>
+
+    <section class="comment-section" aria-labelledby="comments-heading">
+      <h2 id="comments-heading">Comments</h2>
+      <form id="comment-form">
+        <label for="comment-input">Leave a comment</label>
+        <div class="comment-controls">
+          <input id="comment-input" name="comment" type="text" maxlength="300" placeholder="Write what you think..." required>
+          <button id="submit-button" class="submit-button" type="submit">Post comment</button>
+        </div>
+      </form>
+      <ul id="comment-list" class="comment-list"></ul>
+      <p id="empty-message" class="empty-message">No comments yet. Be the first to write one.</p>
+    </section>
+
+    <div class="footer">
+      <p id="status" role="status" aria-live="polite"></p>
+      <button id="reset-button" class="reset-button" type="button">Reset my activity</button>
+    </div>
+  </main>
+</body>
+</html>

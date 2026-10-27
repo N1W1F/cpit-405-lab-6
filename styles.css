@@ -1,0 +1,33 @@
+:root { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #15223b; background: #eef3fa; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.card { width: min(100%, 680px); padding: clamp(24px, 5vw, 44px); border: 1px solid #dbe5f3; border-radius: 24px; background: #fff; box-shadow: 0 20px 55px rgba(34, 59, 102, .09); }
+.eyebrow { color: #5268c3; font-size: .75rem; font-weight: 800; letter-spacing: .13em; }
+h1 { margin: 10px 0 8px; font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.1; }
+.intro { margin: 0 0 34px; color: #65728a; line-height: 1.6; }
+h2 { margin: 0 0 16px; font-size: 1.1rem; }
+.vote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+button { font: inherit; cursor: pointer; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; }
+button:not(:disabled):hover { transform: translateY(-2px); }
+button:focus-visible, input:focus-visible { outline: 3px solid #8197f2; outline-offset: 3px; }
+.vote-button { min-height: 74px; display: flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid #dbe5f3; border-radius: 15px; background: #f8faff; color: #21304d; font-weight: 700; }
+.vote-button.like.selected { border-color: #45b88e; background: #e8f9f1; }
+.vote-button.dislike.selected { border-color: #e48a8a; background: #fff0f0; }
+.vote-button:disabled { cursor: default; opacity: .7; }
+.vote-button.selected:disabled { opacity: 1; }
+.count { min-width: 27px; padding: 4px 8px; border-radius: 999px; background: #e5ebf8; font-size: .84rem; }
+.comment-section { margin-top: 36px; padding-top: 28px; border-top: 1px solid #e7edf5; }
+label { display: block; margin-bottom: 10px; color: #4c5a72; font-size: .9rem; font-weight: 600; }
+.comment-controls { display: flex; gap: 10px; }
+input { flex: 1; min-width: 0; padding: 14px 15px; border: 1px solid #ccd8e9; border-radius: 11px; font: inherit; }
+.submit-button { padding: 0 18px; border: 0; border-radius: 11px; background: #4c63ce; color: #fff; font-weight: 700; }
+.submit-button:hover { background: #3b50b8; }
+.submit-button:disabled { cursor: default; opacity: .6; }
+.comment-list { margin: 20px 0 0; padding: 0; list-style: none; }
+.comment-list li { margin-top: 10px; padding: 14px 16px; overflow-wrap: anywhere; border: 1px solid #e4eaf3; border-radius: 11px; background: #fafcff; }
+.empty-message { margin: 20px 0 0; color: #7c899d; font-size: .9rem; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 34px; }
+#status { min-height: 1.4em; margin: 0; color: #5268c3; font-size: .88rem; }
+.reset-button { padding: 11px 14px; border: 1px solid #d6dfea; border-radius: 10px; background: #fff; color: #4b5c79; white-space: nowrap; }
+.reset-button:hover { background: #f3f6fb; }
+@media (max-width: 500px) { .comment-controls, .footer { flex-direction: column; align-items: stretch; } .submit-button { min-height: 46px; } .vote-grid { gap: 8px; } .vote-button { gap: 5px; } }
